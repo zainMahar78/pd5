@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+float PyramidVolume(float l,float w, float h,string output)
+main(){
+	float l,w,h;
+	cout<<"Enter the length of the pyramid (in meters): ";
+	cin>>l;
+	cout<<"Enter the width of pyramid (in meters): ";
+	cin>>w;
+	cout<<"Enter the height of the pyramid (in meters): ";
+	cin>>h;
+	cout<<"Enter the desirsd output unit (millimeters, centimeters, meters, kilometers): ";
+	string output;
+	cin>>output;
+	float result;
+	result=PyramidVolume(l,w,h,output);
+
+}
+float PyramidVolume(float l,float w, float h,string output){
+	float volume;
+	if(output=="meters"){
+	volume=l*w*h;
+	return "The volume of the pyramid is: "<<volume<<" cubic meters";
+}
+	if (output=="millimeters"){
+	volume=l*w*h*1000;
+	return "The volume of the pyramid is: "<<volume<<" cubic millimeters";
+}
+	if (output=="centimeters"){
+	volume=l*w*h*100;
+	return "The volume of the pyramid is: "<<volume<<" cubic centimeters";
+}
+	if (output=="kilometers"){
+	volume=(*l*w*h)/1000;
+	return "The volume of the pyramid is: "<<volume<<" cubic kilometers";
+}
+}
